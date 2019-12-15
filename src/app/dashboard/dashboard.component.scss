@@ -1,3 +1,45 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  background-color: darkslategray;
+
+  .container-exit, .user-info {
+    margin: auto 15px;
+  }
+
+  .user-info{
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .container-exit {
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+
+    .exit-item {
+      background-color: transparent;
+      color: rgba(white, 0.5);
+      transition: 0.3s;
+      margin: auto 5px;
+    }
+
+    &:hover {
+      .exit-item {
+        transition: 0.3s;
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+
+  .user-info {
+    color: white;
+  }
+}
 
 .table, .thead, .tbody, .row {
   display: flex;
@@ -14,8 +56,11 @@
     align-items: center;
     padding: 5px;
     width: calc(100% - 10px);
-    border-bottom: 1px solid gray;
-    transition: 0.3s;
+
+    & {
+      border-bottom: 1px solid gray;
+      transition: 0.3s;
+    }
 
     &:hover {
       background-color: lightgray;
@@ -24,37 +69,32 @@
   }
 
   .thead {
-    align-items: center;
     height: 35px;
-    background-color: lightgrey;
     padding: 5px;
-    font-weight: 600;
-    border-bottom: 1px solid gray;
+    align-items: center;
 
-    .th {
-      flex: 2;
+    & {
+      font-weight: 600;
+      border-bottom: 1px solid gray;
+      background-color: lightgrey;
+
     }
+
+  }
+
+  .th, .td {
+    flex: 2;
   }
 
   .tbody {
     flex-direction: column;
-
-    .td {
-      flex: 2;
-    }
   }
-
 }
 
 .role-id {
   flex: 1 !important;
 }
 
-.menu {
-  width: 100%;
-  height: 60px;
-  background-color: darkslategray;
-}
 
 .content {
   width: calc(100% - 50px);
@@ -64,20 +104,25 @@
 }
 
 .container-pagination {
-  border-bottom: 1px solid lightgray;
-  border-top: 1px solid lightgray;
-  background-color: rgba(lightgrey, 0.5);
+  & {
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    background-color: rgba(lightgrey, 0.5);
+  }
 
   .btn-page {
     height: 30px;
     width: 30px;
     border-radius: 3px;
     margin: 5px 2px;
-    box-shadow: 1px 1px 3px black;
-    transition: 0.3s;
-    font-weight: 600;
-    outline: none;
+
+    & {
+      box-shadow: 1px 1px 3px black;
+      transition: 0.3s;
+      font-weight: 600;
+      outline: none;
       background-color: white;
+    }
 
     &:hover {
       background-color: lightgray;
@@ -90,7 +135,7 @@
     background-color: lightgray;
   }
 
-  .btn-back{
+  .btn-back {
     background-color: white;
   }
 }

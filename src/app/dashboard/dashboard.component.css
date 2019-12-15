@@ -1,3 +1,38 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  background-color: darkslategray;
+}
+.menu .container-exit, .menu .user-info {
+  margin: auto 15px;
+}
+.menu .user-info {
+  font-size: 16px;
+  font-weight: 500;
+}
+.menu .container-exit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+.menu .container-exit .exit-item {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+  margin: auto 5px;
+}
+.menu .container-exit:hover .exit-item {
+  transition: 0.3s;
+  cursor: pointer;
+  color: white;
+}
+.menu .user-info {
+  color: white;
+}
+
 .table, .thead, .tbody, .row {
   display: flex;
 }
@@ -13,6 +48,8 @@
   align-items: center;
   padding: 5px;
   width: calc(100% - 10px);
+}
+.table .row {
   border-bottom: 1px solid gray;
   transition: 0.3s;
 }
@@ -21,31 +58,24 @@
   transition: 0.3s;
 }
 .table .thead {
-  align-items: center;
   height: 35px;
-  background-color: lightgrey;
   padding: 5px;
+  align-items: center;
+}
+.table .thead {
   font-weight: 600;
   border-bottom: 1px solid gray;
+  background-color: lightgrey;
 }
-.table .thead .th {
+.table .th, .table .td {
   flex: 2;
 }
 .table .tbody {
   flex-direction: column;
 }
-.table .tbody .td {
-  flex: 2;
-}
 
 .role-id {
   flex: 1 !important;
-}
-
-.menu {
-  width: 100%;
-  height: 60px;
-  background-color: darkslategray;
 }
 
 .content {
@@ -65,6 +95,8 @@
   width: 30px;
   border-radius: 3px;
   margin: 5px 2px;
+}
+.container-pagination .btn-page {
   box-shadow: 1px 1px 3px black;
   transition: 0.3s;
   font-weight: 600;

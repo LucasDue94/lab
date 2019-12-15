@@ -1,4 +1,12 @@
-<header class="menu"></header>
+<header class="menu">
+  <h3 class="user-info">Usuário: {{user}}</h3>
+  <div (click)="logout()" class="container-exit">
+    <h3 class="exit-item">Exit</h3>
+    <button class="exit-item">
+      <fa-icon size="2x" [icon]="faExit"></fa-icon>
+    </button>
+  </div>
+</header>
 <main class="content">
   <article class="table">
     <section class="thead">
@@ -20,9 +28,8 @@
     <button (click)="previous()" class="btn-page btn-back">
       <fa-icon [icon]="faAngleLeft"></fa-icon>
     </button>
-    <button (click)="getPage(pag)"
-            [ngClass]="pagination.current_page == pag ? 'selected' : ''" class="btn-page"
-            *ngFor="let pag of pages ">{{pag}}</button>
+    <button (click)="getPage(pag)" [ngClass]="pagination.current_page == pag ? 'selected' : ''"
+            class="btn-page" *ngFor="let pag of pages ">{{pag}}</button>
     <button (click)="next()" class="btn-page btn-back">
       <fa-icon [icon]="faAngleRight"></fa-icon>
     </button>

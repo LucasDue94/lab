@@ -27,7 +27,7 @@ export class RoleService {
       .subscribe((json: any[]) => {
         subject.next(json)
       }, error => {
-        this.authService.logout(localStorage.getItem('token'));
+        this.authService.logout();
       });
     return subject.asObservable();
   }

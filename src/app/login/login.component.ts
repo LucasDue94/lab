@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
     username: ['', Validators.required],
     password: ['', Validators.required]
   });
+  errors = '';
 
   constructor(private fb: FormBuilder, private authService: AuthService,
               private router: Router) {
@@ -22,21 +23,17 @@ export class LoginComponent implements OnInit {
   }
 
   authentic() {
-    /*const user = {
+    const user = {
       username: this.form.get('username').value,
       password: this.form.get('password').value
-    };*/
-    const user = {
-      username: 'admin',
-      password: 'newsecret'
     };
-    console.log(user);
     this.authService.authentication(user).subscribe(res => {
-      console.log(res);
       if (res.hasOwnProperty('error')) {
-
+        this.errors = 'Não foi possível autenticar com as credenciais enviadas.' +
+          'Tente novamente.'
       } else {
         localStorage.setItem('token', res['token']);
+        localStorage.setItem('user', user.username);
         this.router.navigate(['dashboard']);
       }
     });

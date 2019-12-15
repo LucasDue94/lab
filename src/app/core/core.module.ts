@@ -1,9 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {AuthService} from "./auth/auth.service";
 import {RoleService} from "./role/role.service";
-
-
 
 @NgModule({
   declarations: [],
