@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {CoreModule} from "./core/core.module";
+import {HttpClientModule} from "@angular/common/http";
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    CoreModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,96 @@
+
+.table, .thead, .tbody, .row {
+  display: flex;
+}
+
+.table {
+  text-transform: capitalize;
+  width: 100%;
+  height: calc(100% - 50px);
+  flex-direction: column;
+
+  .row {
+    height: 35px;
+    align-items: center;
+    padding: 5px;
+    width: calc(100% - 10px);
+    border-bottom: 1px solid gray;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: lightgray;
+      transition: 0.3s;
+    }
+  }
+
+  .thead {
+    align-items: center;
+    height: 35px;
+    background-color: lightgrey;
+    padding: 5px;
+    font-weight: 600;
+    border-bottom: 1px solid gray;
+
+    .th {
+      flex: 2;
+    }
+  }
+
+  .tbody {
+    flex-direction: column;
+
+    .td {
+      flex: 2;
+    }
+  }
+
+}
+
+.role-id {
+  flex: 1 !important;
+}
+
+.menu {
+  width: 100%;
+  height: 60px;
+  background-color: darkslategray;
+}
+
+.content {
+  width: calc(100% - 50px);
+  height: calc(100% - 110px);
+  padding: 15px;
+  border: 10px solid gray;
+}
+
+.container-pagination {
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  background-color: rgba(lightgrey, 0.5);
+
+  .btn-page {
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    margin: 5px 2px;
+    box-shadow: 1px 1px 3px black;
+    transition: 0.3s;
+    font-weight: 600;
+    outline: none;
+      background-color: white;
+
+    &:hover {
+      background-color: lightgray;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  }
+
+  .selected {
+    background-color: lightgray;
+  }
+
+  .btn-back{
+    background-color: white;
+  }
+}
